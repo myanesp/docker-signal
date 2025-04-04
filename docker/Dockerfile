@@ -1,6 +1,5 @@
-ARG IMAGE_TAG="debian-10"
+ARG IMAGE_TAG="debian-12-v4"
 ARG APP_ICON="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Signal_ultramarine_icon.svg/600px-Signal_ultramarine_icon.svg.png"
-#ARG APP_ICON="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Signal-Logo.svg/768px-Signal-Logo.svg.png"
 
 FROM jlesage/baseimage-gui:${IMAGE_TAG}
 ENV APP_NAME="Signal Messenger"
@@ -29,6 +28,7 @@ RUN install_app_icon.sh ${APP_ICON}
 
 # Entrypoint script
 COPY ./startapp.sh /startapp.sh
+RUN chmod +x /startapp.sh
 
 # Volumes definition
 VOLUME ["/config"]
