@@ -12,7 +12,7 @@ _This image is not official and is not associated with the Signal Foundation._
 ## Getting started
 You can get this image up and running by downloading or copying the [docker-compose.yml](docker-compose.yml) file. Make sure to adjust the volumes and port if needed.
 ```bash
-wget https://github.com/myanesp/docker-signal/blob/develop/docker-compose.yml
+wget https://github.com/myanesp/docker-signal/raw/refs/heads/develop/docker-compose.yml
 docker compose up -d
 ```
 
