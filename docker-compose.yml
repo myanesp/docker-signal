@@ -1,0 +1,12 @@
+---
+services:
+  signal-desktop-gui:
+    container_name: signal-desktop
+    ports:
+      - 5800:5800
+    volumes:
+      - ./config:/config
+      - /etc/localtime:/etc/localtime:ro
+    image: ghcr.io/myanesp/signal-desktop
+    restart: always
+
